@@ -19,7 +19,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Partitions", "..\Partitions
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FractionalCalc", "..\FractionalCalc\FractionalCalc.vcxproj", "{BDC5E72D-94C6-4619-81B9-1356407A3B0C}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Arrays", "..\Arrays\Arrays.vcxproj", "{E3E3E3E2-CAA7-4B45-8C6E-6ABABFDD4B77}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ArraysHW1", "..\Arrays\Arrays.vcxproj", "{E3E3E3E2-CAA7-4B45-8C6E-6ABABFDD4B77}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
