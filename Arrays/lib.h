@@ -1,6 +1,6 @@
 #pragma once
 
-void sortsComparison();
+void sortsComparison(int n);
 void apartmentHouse();
 void assertUsing();
 void rowOfNumbers();

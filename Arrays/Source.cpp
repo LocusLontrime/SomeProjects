@@ -13,11 +13,11 @@ int main() {
 	// apartmentHouse();
 
 	// task 2 "Sorts implementations and comparison in terms of time":
-	// sortsComparison();
+	sortsComparison(1000000); // takes size of an array...
 
 	// task 3 "Assert using"
 	// assertUsing();
 
 	// task 4 "Row of Numbers"
-	rowOfNumbers();
+	// rowOfNumbers();
 }

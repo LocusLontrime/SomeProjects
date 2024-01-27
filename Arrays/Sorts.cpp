@@ -157,11 +157,23 @@ int hoarePartition(int *arr, int leftBorder, int rightBorder, int pivotEl) {
 
 	while (1) {
 		// skipping the elements that stayed at their place on the left side:
-		while (arr[leftBorder] < pivotEl)
+		while (arr[leftBorder] < pivotEl) {
+		
+			// step of counter:
+			recCounter += 1;
+		
 			leftBorder += 1;
+		}
+			
 		// skipping the elements that stayed at their place on the right side:
-		while (arr[rightBorder] > pivotEl)
+		while (arr[rightBorder] > pivotEl) {
+		
+			// step of counter:
+			recCounter += 1;
+		
 			rightBorder -= 1;
+		}
+			
 		// we are swapping two elements if they are both stay at wrong places:
 		if (leftBorder < rightBorder) {
 			int temp = arr[leftBorder];
@@ -172,14 +184,15 @@ int hoarePartition(int *arr, int leftBorder, int rightBorder, int pivotEl) {
 		}
 		else
 			return rightBorder;
+
+		// step of counter:
+		recCounter += 1;
 	}
 
 }
 
 // fast in-place recursive quick sort with Hoare's partition (NOT STABLE):
 void recursiveQuickSort(int *arr, int leftBorder, int rightBorder) {
-	// step of counter:
-	recCounter += 1;
 
 	// border case of array of 1 element:
 	if (leftBorder == rightBorder)
@@ -219,6 +232,9 @@ void merge(int *leftArr, int *rightArr, int lSize, int rSize, int *mergedArr) {
 			mergedArr[lP + rP] = rightArr[rP];
 			rP += 1;
 		}
+
+		// step of counter:
+		recCounter += 1;
 	}
 
 	// now we're adding the elements remained in one of arrays to the resulting one...
@@ -226,11 +242,17 @@ void merge(int *leftArr, int *rightArr, int lSize, int rSize, int *mergedArr) {
 	// the case in which the elements remained in the left array:
 	for (; lP < lSize; lP++) {
 		mergedArr[lP + rP] = leftArr[lP];
+
+		// step of counter:
+		recCounter += 1;
 	}
 
 	// the case in which the elements remained in the right array:
 	for (; rP < rSize; rP++) {
 		mergedArr[lP + rP] = rightArr[rP];
+
+		// step of counter:
+		recCounter += 1;
 	}
 
 	/*cout << "merged arr: " << endl;
@@ -242,8 +264,6 @@ void merge(int *leftArr, int *rightArr, int lSize, int rSize, int *mergedArr) {
 }
 
 int* recursiveMergeSort(int *arr, int lInd, int rInd) {
-	// step of counter:
-	recCounter += 1;
 
 	// base case:
 	if (lInd == rInd) {
@@ -297,10 +317,9 @@ void bubbleSort(int *arr, int size) {
 }
 
 
-void sortsComparison()
+void sortsComparison(int n)
 {
 	// array size:
-	const int n = 100000;
 	const int nSize = n * sizeof(int);
     int* array;
 	array = (int*)malloc(nSize);  // memory allocation...
@@ -311,36 +330,58 @@ void sortsComparison()
 
 	fillArrayRandomly(array, n);
 
-	int t2 = clock();
-	
-	/*cout << "Random array: " << endl;
-	for (size_t i = 0; i < n; i++)
-	{
-		cout << array[i] << " ";
-	}*/
+	// some diff sort methods comparison:
+	int t2 = clock(); 
+	cout << "Random array filling req " << (t2 - t1) << " ms" << endl;
 
 	recCounter = 0;
-
-	// some diff sort methods comparison:
-
 	heapSort(array, n);  // 213ms for 10^6
-	// ascendingSiftingSort(array, n); // 236ms for 10^6 -->> should be faster than common heap sort, maybe because of bad optimization on c++ lang...
-	// quickSort(array, n); // 75ms for 10^6 (unstable, but really fast...)
-	// array = mergeSort(array, n); // 353ms for 10^6
-	// bubbleSort(array, n); // O(n^2) runtime, too slow in comparison with linearithmic sorts...
 
 	int t3 = clock();
+	cout << "Heap Sort time: " << (t3 - t2) << " ms" << endl;
+	cout << "rec counter: " << recCounter << "\n" << endl;
 
-	/*cout << "\nSorted array: " << endl;
-	for (size_t i = 0; i < n; i++)
-	{
-		cout << array[i] << " ";
-	}*/
+	fillArrayRandomly(array, n);
+	t3 = clock();
+	recCounter = 0;
+	ascendingSiftingSort(array, n); // 236ms for 10^6 -->> should be faster than common heap sort, maybe because of bad optimization on c++ lang...
 
-	cout << "done!" << endl;
-	cout << "Random array filling req " << (t2 - t1) << " ms" << endl;
-	cout << "Sort time: " << (t3 - t2) << " ms" << endl;
-	cout << "rec counter: " << recCounter << endl;
+	int t4 = clock();
+	cout << "Ascending Sifting Heap sort time: " << (t4 - t3) << " ms" << endl;
+	cout << "rec counter: " << recCounter << "\n" << endl;
+
+	fillArrayRandomly(array, n);
+	t4 = clock();
+	recCounter = 0;
+	quickSort(array, n); // 75ms for 10^6 (unstable, but really fast...)
+
+	int t5 = clock();
+	cout << "Quick Sort Hoare time: " << (t5 - t4) << " ms" << endl;
+	cout << "rec counter: " << recCounter << "\n" << endl;
+
+	fillArrayRandomly(array, n);
+	t5 = clock();
+	recCounter = 0;
+	array = mergeSort(array, n); // 353ms for 10^6
+
+	int t6 = clock();
+	cout << "Merge Sort time: " << (t6 - t5) << " ms" << endl;
+	cout << "rec counter: " << recCounter << "\n" << endl;
+
+	cout << "Do you wanna wait until the buble sort has finished its work?.. if so press 'Y' (it may take long):\n";
+	string answer;
+	cin >> answer;
+	if (answer == "Y") {
+
+		fillArrayRandomly(array, n);
+		t6 = clock();
+		recCounter = 0;
+		bubbleSort(array, n); // O(n^2) runtime, too slow in comparison with linearithmic sorts...
+
+		int t7 = clock();
+		cout << "Bubble Sort time: " << (t7 - t6) << " ms" << endl;
+		cout << "rec counter: " << recCounter << "\n" << endl;
+	}	
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
