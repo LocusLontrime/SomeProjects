@@ -22,6 +22,7 @@ void task1() {
 
 		cout << "Enter the " << i + 1 << "th element: " << endl;
 		cin >> vArr[i];
+
 	}
 
 	cout << "Please, enter the element X to be removed from the vector: " << endl;
