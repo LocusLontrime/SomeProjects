@@ -68,7 +68,7 @@ void heapSort(int *arr, int size) {
 	}
 }
 
-//--------------------------------ASCENDING SHIFTING HEAP SORT O(n*log(n))-----------------------------------------------------------------------
+//--------------------------------ASCENDING SIFTING HEAP SORT O(n*log(n))-----------------------------------------------------------------------
 
 // here we find the leaf of the heap built with the max array's element
 int topDownMaxLeafSearch(int* arr, int size, int upperInd) {
@@ -359,7 +359,7 @@ void sortsComparison(int n)
 	cout << "Merge Sort time: " << (t6 - t5) << " ms" << endl;
 	cout << "rec counter: " << recCounter << "\n" << endl;
 
-	cout << "Do you wanna wait until the buble sort has finished its work?.. if so press 'Y' (it may take long):\n";
+	cout << "Do you wanna wait until the buble sort has finished its work?.. if so press 'Y' (it may take long): " << endl;
 	string answer;
 	cin >> answer;
 	if (answer == "Y") {
