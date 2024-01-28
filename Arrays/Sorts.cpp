@@ -254,13 +254,6 @@ void merge(int *leftArr, int *rightArr, int lSize, int rSize, int *mergedArr) {
 		// step of counter:
 		recCounter += 1;
 	}
-
-	/*cout << "merged arr: " << endl;
-	for (size_t i = 0; i < lSize + rSize; i++)
-	{
-		cout << mergedArr[i] << " ";
-	}
-	cout << endl;*/
 }
 
 int* recursiveMergeSort(int *arr, int lInd, int rInd) {
@@ -319,12 +312,10 @@ void bubbleSort(int *arr, int size) {
 
 void sortsComparison(int n)
 {
-	// array size:
-	const int nSize = n * sizeof(int);
-    int* array;
-	array = (int*)malloc(nSize);  // memory allocation...
+	// n -> array size:
+    int* array = new int[n]; // dynamic memory allocation... 
 
-	cout << "size: " << n << endl;
+	cout << "Initial array size: " << n << "\n" << endl;
 
 	int t1 = clock();
 
@@ -332,7 +323,7 @@ void sortsComparison(int n)
 
 	// some diff sort methods comparison:
 	int t2 = clock(); 
-	cout << "Random array filling req " << (t2 - t1) << " ms" << endl;
+	cout << "Random array filling req " << (t2 - t1) << " ms" << "\n" << endl;
 
 	recCounter = 0;
 	heapSort(array, n);  // 213ms for 10^6

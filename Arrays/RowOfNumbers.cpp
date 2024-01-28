@@ -29,5 +29,11 @@ void rowOfNumbers() {
 	// in the example given:
 	int array[size] = { 114, 111, 106, 107, 108, 105, 115, 108, 110, 109, 112, 113, 116, 117, 118 };
 
-	cout << "Repeated el: " << getRepeatedOne(array, size) << endl;
+	cout << "Initial array: " << endl;
+	for (size_t i = 0; i < size; i++)
+	{
+		cout << array[i] << " ";
+	}
+
+	cout << "\nRepeated el: " << getRepeatedOne(array, size) << endl;
 }

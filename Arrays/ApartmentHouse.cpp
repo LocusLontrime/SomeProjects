@@ -13,7 +13,6 @@ void apartmentHouse() {
 
 	string* array = new string[apartmentsQ];
 
-	cout << "Array: " << endl;
 	for (size_t i = 0; i < apartmentsQ; i++)
 	{
 		cout << "Please, enter the name of the " << i + 1 << "th house resident" << endl;
