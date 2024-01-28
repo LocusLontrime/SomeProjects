@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-#include <math.h>
 #include "lib.h"
 
 
@@ -36,7 +35,7 @@ void task8() {
 
 		if (ans == "Y") {
 		
-			cout << "Your number guessed in " << ops << "ops!" << endl;
+			cout << "Your number guessed in " << ops << " ops!" << endl;
 			break;
 
 		}

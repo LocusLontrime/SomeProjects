@@ -20,5 +20,7 @@ void task1() {
 		}
 
 	}
+	else
+		cout << "Wrong hour... should be greater than zero and less or equal to 12!";
 
 }

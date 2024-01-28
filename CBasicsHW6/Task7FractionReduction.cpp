@@ -1,9 +1,9 @@
 #include <iostream>
-#include <math.h>
 #include "lib.h"
 
 
 using namespace std;
+
 
 
 long long getGcd(long long a, long long b) {
@@ -45,6 +45,7 @@ void task7() {
 	cout << "gcd of num and den: " << gcd << endl;
 
 	cout << "The fraction reduced: " << numerator / gcd;
+
 	if (gcd != denominator)
 		cout << "/" << denominator / gcd;
 	cout << endl;
