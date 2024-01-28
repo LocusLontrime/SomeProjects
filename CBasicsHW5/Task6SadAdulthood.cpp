@@ -5,7 +5,7 @@
 using namespace std;
 
 
-void task6() {
+void task6() {  // 366 36 98 989 LL
 
 	int day, month, year;
 	int currDay, currMonth, currYear;

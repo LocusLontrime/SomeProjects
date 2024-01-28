@@ -3,8 +3,6 @@
 
 
 #include <iostream>
-#include <vector>
-#include <algorithm>
 #include "lib.h"
 
 
@@ -13,6 +11,8 @@ using namespace std;
 
 int main() {
 
+	// lazy version, no swith...)
+	 
 	// task1();
 	// task2();
 	// task3();
