@@ -28,7 +28,7 @@ void task1() {
 	cout << "Please, enter the element X to be removed from the vector: " << endl;
 	cin >> x;
 
-	const int nOfDels = erase(vArr, x);
+	const int nOfDels = erase(vArr, x); // C++20 feature, fast'n'convenient, removes all occurrences of x...
 
 	cout << nOfDels << " elements \"" << x << "\" have been removed from the vector..." << endl
 		<< "Now the vector is: " << endl;

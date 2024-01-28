@@ -25,6 +25,7 @@ void task3() {
 
 		if (val == -1) {
 		
+			// if val == -1 -> we should print the circular buffer:
 			cout << "Circular buffer: " << endl;
 
 			for (size_t i = 0; i < size; i++)
@@ -37,11 +38,13 @@ void task3() {
 		}
 		else if (val < -1) {
 
+			// -1 is reserved, let us suppose that values must be positive or equal to zero:
 			cout << "Value should be positive or equal to zero!" << endl;
 		
 		}
 		else {
 		
+			// common case, adding the val to the circular buffer:
 			cout << "Appending the value of " << val << endl;
 
 			cb[startPointer++ % size] = val;

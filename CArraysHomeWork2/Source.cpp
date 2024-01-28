@@ -9,10 +9,10 @@ using namespace std;
 
 
 int main() {
+    // lazy vaiation without switch...
 
     // task1();
     task2();
     // task3();
-
 }
 
