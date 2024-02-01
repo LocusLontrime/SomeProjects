@@ -31,5 +31,4 @@ void task8() {
 		printNSymbols2(height - i, " ");
 		cout << endl;
 	}
-
 }
