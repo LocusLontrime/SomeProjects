@@ -14,7 +14,8 @@ int main()
     // task4();
     // task5();
     // task6();
-    task7();
+    // task7();
+    task8();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

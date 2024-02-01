@@ -5,6 +5,7 @@
 
 using namespace std;
 
+
 void task1() {
 
 	string text, word;
@@ -15,6 +16,7 @@ void task1() {
 	cin >> word;
 
 	int counter = 0;
+
 	for (size_t j = 0; j < text.size() - word.size() + 1; j++)
 	{
 		bool flag = true;

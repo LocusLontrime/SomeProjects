@@ -42,6 +42,9 @@
     <ClCompile Include="Task7OceansFriends.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Task8Biolaboratory2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="lib.h">

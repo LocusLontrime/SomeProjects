@@ -136,6 +136,7 @@
     <ClCompile Include="Task5RunnerFromKenya.cpp" />
     <ClCompile Include="Task6Pendulum.cpp" />
     <ClCompile Include="Task7OceansFriends.cpp" />
+    <ClCompile Include="Task8Biolaboratory2.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="lib.h" />
