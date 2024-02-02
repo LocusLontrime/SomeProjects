@@ -7,7 +7,7 @@ using namespace std;
 
 void task7() {
 
-	// for illustrative purposes:
+	// for illustrative purposes (we could solve it using only one 3d array):
 	int heightMap[5][5];
 
 	for (size_t i = 0; i < 25; i++)
@@ -50,3 +50,39 @@ void task7() {
 			cout << endl;
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// lla

@@ -131,6 +131,7 @@
     <ClCompile Include="Task1FectiveTable.cpp" />
     <ClCompile Include="Task6SnakePath.cpp" />
     <ClCompile Include="Task7AlmostMaincraft.cpp" />
+    <ClCompile Include="Task8SeaBattle.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="lib.h" />
