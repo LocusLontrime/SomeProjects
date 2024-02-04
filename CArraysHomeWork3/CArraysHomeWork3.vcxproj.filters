@@ -30,6 +30,18 @@
     <ClCompile Include="Task8SeaBattle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Task2TicTacToe.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Task3Matrices.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Task4MatrixMultVect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Task5BubbleWrap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="lib.h">

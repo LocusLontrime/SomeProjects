@@ -1,5 +1,4 @@
 #include <iostream>
-
 #include "lib.h"
 
 
@@ -7,7 +6,7 @@ using namespace std;
 
 
 bool placeShip_(bool** ships1, bool** ships2, int y0, int x0, int y1, int x1, bool dir, bool placementFlag /* true -> forward, false -> inverse*/) {
-	// placement flag = true -> common, else -> inverse...
+	// places one ship: placement flag = true -> common, else -> inverse...
 	bool flag = y1 - y0 > x1 - x0;
 	int yStart = dir ? y0 : y1, xStart = dir ? x0 : x1;
 
@@ -29,12 +28,11 @@ bool placeShip_(bool** ships1, bool** ships2, int y0, int x0, int y1, int x1, bo
 bool placeShip(bool** ships1, bool** ships2, int y0, int x0, int y1, int x1) {
 
 	return placeShip_(ships1, ships2, y0, x0, y1, x1, true, true);
-
 }
 
 
 void print(bool** ships) {
-
+	// prints only one player's ships:
 	for (size_t j = 0; j < 10; j++)
 	{
 		for (size_t i = 0; i < 10; i++)
@@ -47,7 +45,7 @@ void print(bool** ships) {
 
 
 void print2(bool** ships1p, bool** ships2p) {
-
+	// prints players' boards:
 	cout << "Ships1p array: " << endl;
 	print(ships1p);
 
@@ -59,7 +57,7 @@ void print2(bool** ships1p, bool** ships2p) {
 
 
 void placeShips(bool **ships1p, bool **ships2p) {
-
+	// places all the ships on the board for player1 and player2:
 	int shipsMap[][2] = { {1, 1}, {2, 1}, {3, 1}, {4, 1} };
 
 	for (size_t i = 0; i < 4; i++)
