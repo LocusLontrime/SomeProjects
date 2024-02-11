@@ -38,7 +38,7 @@ void task4() {
 	// two pointers:
 	int lP = 0, rP = length - 1;
 
-	while (lP <= rP) 
+	while (lP <= rP) // the core of algo...
 		if (abs(array[lP]) < abs(array[rP])) newArr[rP-- - lP] = array[rP];
 		else newArr[rP - lP++] = array[lP];
 
