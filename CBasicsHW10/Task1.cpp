@@ -52,7 +52,6 @@ void task1() {
 			std::cout << "Root: " << x << std::endl;
 		}
 	}
-
 }
 
 
