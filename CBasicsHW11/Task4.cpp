@@ -1,10 +1,12 @@
 #include <iostream>
+
 #include <set>
 #include <string>
+
 #include "lib.h"
 
 
-using namespace std;
+using namespace std; // 36 366 98 989 LL ..................................................................................
 
 
 const int length = 3;
@@ -14,13 +16,17 @@ set<char> symbs = { 'X', 'O', '.' };
 set<int> bins = { 0, 1 };
 
 
-char checkRowCol(string *board, int j, int num) { // 'X', 'O', '.'
+char checkRowColDiag(string *board, int j, int num) { // 'X', 'O', '.'
 
 	int counterX = 0, counterO = 0;
 
-	for (size_t i = 0; i < length; i++)
+	int djdi[][2] = { {0, 1}, {0, 1},  {1, 1}, {1, -1} };
+	int coords[][2] = { {j, 0}, {0, j}, {j, 0}, {j, 2} };
+	string phrases[] = {"Checks col ", "Checks row ", "Checks diag 1 ", "Checks diag 2 " };
+
+	for (; (num ? coords[num][0] : coords[num][1]) < length ;)
 	{
-		char ch = board[num ? i : j][num ? j : i];
+		char ch = board[coords[num][0]][coords[num][1]];
 		
 		if (ch == 'X')
 			counterX++;
@@ -28,29 +34,16 @@ char checkRowCol(string *board, int j, int num) { // 'X', 'O', '.'
 			counterO++;
 		else
 			break;
+
+		for (int k = 0; k < 2; k++) // a step of the outer cycle...
+			num == 1 ? coords[num][(1 + k) % 2] += djdi[num][k] : coords[num][k] += djdi[num][k];
 	}
 
-	cout << (num ? "Checks col " : "Checks row ") << j << " -> counterX, counterO: " << counterX << ", " << counterO << endl;
+	string str = phrases[num];
+	if (num < 2)
+		str += to_string(j);
 
-	return counterX == 3 ? 'X' : (counterO == 3 ? 'O' : '.');
-}
-
-
-char checkDiag(string* board, int num) { // num = 0 -> common diag and num = 1 -> second one...
-
-	int counterX = 0, counterO = 0;
-
-	for (size_t j = 0, i = 0; j < length; j++, i++)
-	{
-		if (board[j][num ? 2 - i : i] == 'X')
-			counterX++;
-		else if (board[j][num ? 2 - i : i] == 'O')
-			counterO++;
-		else
-			break;
-	}
-
-	cout << (num ? "Checks diag 2 " : "Checks diag 1 ") << "-> counterX, counterO: " << counterX << ", " << counterO << endl;
+	cout << str << " -> counterX, counterO: " << counterX << ", " << counterO << endl;
 
 	return counterX == 3 ? 'X' : (counterO == 3 ? 'O' : '.');
 }
@@ -60,9 +53,9 @@ char findWinner(string* board) {
 
 	int xWins = 0, oWins = 0;
 
-	for (int num = 0; num < 2; num++) {
-		for (size_t i = 0; i < length; i++) {
-			char winner = checkRowCol(board, i, num);
+	for (int num = 0; num < 4; num++) {
+		for (size_t i = 0; i < (num < 2 ? length : 1); i++) {
+			char winner = checkRowColDiag(board, i, num);
 
 			cout << "Winner: " << winner << endl;
 
@@ -72,21 +65,7 @@ char findWinner(string* board) {
 				else oWins++;
 			}
 		}
-	}
-	
-	for (int num = 0; num < 2; num++) {
-
-		char winner = checkDiag(board, num);
-
-		cout << "Winner: " << winner << endl;
-
-		if (winner != '.') {
-
-			if (winner == 'X') xWins++;
-			else oWins++;
-		}
-	}
-		
+	}	
 
 	cout << "xWins, oWins: " << xWins << ", " << oWins << endl;
 
