@@ -16,7 +16,7 @@ set<char> symbs = { 'X', 'O', '.' };
 set<int> bins = { 0, 1 };
 
 
-char checkRowColDiag(string *board, int j, int num) { // 'X', 'O', '.'
+char checkRowColDiag(const string *board, int j, int num) { // 'X', 'O', '.'
 
 	int counterX = 0, counterO = 0;
 
@@ -49,7 +49,7 @@ char checkRowColDiag(string *board, int j, int num) { // 'X', 'O', '.'
 }
 
 
-char findWinner(string* board) {
+char findWinner(const string* board) {
 
 	int xWins = 0, oWins = 0;
 
@@ -75,7 +75,7 @@ char findWinner(string* board) {
 }
 
 
-bool validateBoard(string* board, int &qX, int &qO) {
+bool validateBoard(const string* board, int &qX, int &qO) {
 
 
 	for (size_t j = 0; j < length; j++)
@@ -95,7 +95,7 @@ bool validateBoard(string* board, int &qX, int &qO) {
 }
 
 
-void ticTacToe(string* board) {
+void ticTacToe(const string* board) {                                                         // 36 366 98 989 LL
 
 	int qX = 0, qO = 0;
 
