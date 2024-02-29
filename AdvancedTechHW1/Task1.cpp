@@ -11,7 +11,7 @@ void task1() { // 36 366 98 989 LL
 
 	ifstream f;
 	string path = "C:\\Users\\langr\\source\\C_plus_plus_repo\\ConsoleApplication1\\AdvancedTechHW1\\words.txt";
-	f.open(path); // 
+	f.open(path);  
 
 	int wordCounter = 0;
 	string word;
