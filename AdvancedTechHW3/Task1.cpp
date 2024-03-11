@@ -40,10 +40,10 @@ void task1() {
     }
     else if (options == "list") {
         ifstream file("statement.txt");
-        do {
+        while (!file.eof()) {
             readToFile(file, data);
             cout << data.name << " " << data.firstname << " " << data.date << "  " << data.money << endl;
-        } while (!file.eof());
+        }
         file.close();
     }
     else
