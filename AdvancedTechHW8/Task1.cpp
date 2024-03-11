@@ -16,7 +16,7 @@ enum Condition {
 };
 
 
-class Track {
+struct Track {
 
 	public:
 		string name;
@@ -45,11 +45,6 @@ class AudioPlayer {
 
 		}
 
-		AudioPlayer(int val) {
-		
-
-		
-		}
 
 	public:
 
@@ -130,6 +125,6 @@ class AudioPlayer {
 
 void task1() {
 
-
+	// ...
 
 }
