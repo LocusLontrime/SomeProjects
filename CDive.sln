@@ -51,6 +51,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CArraysHomeWork7", "CArrays
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AdvancedTechHW1", "AdvancedTechHW1\AdvancedTechHW1.vcxproj", "{09D90F13-9611-482D-BCFA-1470397F4744}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AdvancedTechHW6", "AdvancedTechCHW6\AdvancedTechCHW6.vcxproj", "{32B7854E-C668-459F-8F86-014D4570DD9C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -251,6 +253,14 @@ Global
 		{09D90F13-9611-482D-BCFA-1470397F4744}.Release|x64.Build.0 = Release|x64
 		{09D90F13-9611-482D-BCFA-1470397F4744}.Release|x86.ActiveCfg = Release|Win32
 		{09D90F13-9611-482D-BCFA-1470397F4744}.Release|x86.Build.0 = Release|Win32
+		{32B7854E-C668-459F-8F86-014D4570DD9C}.Debug|x64.ActiveCfg = Debug|x64
+		{32B7854E-C668-459F-8F86-014D4570DD9C}.Debug|x64.Build.0 = Debug|x64
+		{32B7854E-C668-459F-8F86-014D4570DD9C}.Debug|x86.ActiveCfg = Debug|Win32
+		{32B7854E-C668-459F-8F86-014D4570DD9C}.Debug|x86.Build.0 = Debug|Win32
+		{32B7854E-C668-459F-8F86-014D4570DD9C}.Release|x64.ActiveCfg = Release|x64
+		{32B7854E-C668-459F-8F86-014D4570DD9C}.Release|x64.Build.0 = Release|x64
+		{32B7854E-C668-459F-8F86-014D4570DD9C}.Release|x86.ActiveCfg = Release|Win32
+		{32B7854E-C668-459F-8F86-014D4570DD9C}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

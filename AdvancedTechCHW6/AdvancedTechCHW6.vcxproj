@@ -18,12 +18,22 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source.cpp" />
+    <ClCompile Include="Task1.cpp" />
+    <ClCompile Include="Task2.cpp" />
+    <ClCompile Include="Task3.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="lib.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{09d90f13-9611-482d-bcfa-1470397f4744}</ProjectGuid>
-    <RootNamespace>AdvancedTechHW1</RootNamespace>
+    <ProjectGuid>{32b7854e-c668-459f-8f86-014d4570dd9c}</ProjectGuid>
+    <RootNamespace>AdvancedTechCHW6</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>AdvancedTechHW6</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -104,6 +114,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -126,29 +137,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="Source.cpp" />
-    <ClCompile Include="Task5.cpp" />
-    <ClCompile Include="Task1.cpp" />
-    <ClCompile Include="Task2.cpp" />
-    <ClCompile Include="Task3.cpp" />
-    <ClCompile Include="Task4.cpp" />
-    <ClCompile Include="TestF.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="lib.h" />
-    <ClInclude Include="resource.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="BigNums.txt" />
-    <Text Include="Data.txt" />
-    <Text Include="LittleNums.txt" />
-    <Text Include="MiddleNums.txt" />
-    <Text Include="words.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="AdvancedTechHW1.rc" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

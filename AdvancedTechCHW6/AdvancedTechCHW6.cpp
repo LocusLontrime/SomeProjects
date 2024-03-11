@@ -1,18 +1,11 @@
-// AdvancedTechHW1.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// AdvancedTechCHW6.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
 #include <iostream>
-#include "lib.h"
-
 
 int main()
 {
-    // task1();
-    // task2();
-    // task3();
-    // task4();
-    // task5();
-    testF();
+    std::cout << "Hello World!\n";
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

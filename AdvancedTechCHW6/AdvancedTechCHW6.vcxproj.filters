@@ -27,44 +27,10 @@
     <ClCompile Include="Task3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Task4.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Task5.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="TestF.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="lib.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="resource.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="words.txt">
-      <Filter>Source Files</Filter>
-    </Text>
-    <Text Include="Data.txt">
-      <Filter>Source Files</Filter>
-    </Text>
-    <Text Include="BigNums.txt">
-      <Filter>Source Files</Filter>
-    </Text>
-    <Text Include="MiddleNums.txt">
-      <Filter>Source Files</Filter>
-    </Text>
-    <Text Include="LittleNums.txt">
-      <Filter>Source Files</Filter>
-    </Text>
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="AdvancedTechHW1.rc">
-      <Filter>Resource Files</Filter>
-    </ResourceCompile>
   </ItemGroup>
 </Project>
