@@ -129,7 +129,7 @@ class Phone {
 
 		void exit() {
 
-			cout << "" << endl;
+			cout << "exitting..." << endl;
 
 		}
 

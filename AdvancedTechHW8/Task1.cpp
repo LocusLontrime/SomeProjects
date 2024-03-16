@@ -116,7 +116,7 @@ class AudioPlayer {
 
 		void exit() {
 		
-			cout << "" << endl;
+			cout << "exitting..." << endl;
 
 		}
 
